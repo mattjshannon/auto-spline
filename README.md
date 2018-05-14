@@ -12,9 +12,9 @@ Note the continuum (solid black line) is a **spline**, i.e. a *piecewise polynom
 
 As written above, the spline is determined by its *anchor points*. Thus, in the current methodology, it is important to choose appropriate x-axis (or abscissa--here, wavelength) positions for the anchor points. The idea is that the anchor points should (generally) sit on either side of an emission feature, so that we have a reasonably smooth continuum in the region of the feature itself. So for instance, the main PAH bands are at...
 
-6.2, 7.7, 8.6, 11.2, 12.7 μm.
+``6.2, 7.7, 8.6, 11.2, 12.7`` μm.
 
-Thus, you typically see anchor points near [5.9 μm, 6.6 μm] (to isolate the 6.2 μm feature), [7.2 μm, 8.2 μm] (to isolate the 7.7 μm feature), and so on.
+Thus, you typically see anchor points near [5.9 μm, 6.6 μm] (to isolate the ``6.2`` μm feature), [7.2 μm, 8.2 μm] (to isolate the ``7.7`` μm feature), and so on.
 
 The *problem* is that depending on the noise levels and how much the continuum shape varies (which can be significant when you look at different astronomical objects), you can't in general "set-and-forget" hard-coded continuum anchor point locations. Instead, you inevitably need to adjust/wiggle the anchor points slightly -- in some places, this ends up meaning you need to allow a window of movement for an anchor point, or in other regions you end up needing to smooth your data to get a "good looking" continuum.
 
@@ -22,7 +22,7 @@ The *problem* is that depending on the noise levels and how much the continuum s
 
 Generally, the purpose of the spline (and continuum in general for that matter) is so that you can extract trends, correlations and statistics from your data. The continuum is drawn because we basically assume that the small emission features (the wiggly bits) are easy to isolate/measure, whereas it is very difficult to discern the components that may be contributing to the underlying continuum/broad emission (which can be numerous).
 
-In terms of data treneds, the strengths of the emission features are known to vary as well as correlate; for instance, if you measure the flux of the 6.2, 7.7 and 11.2 bands (i.e., integrate the emission near those wavelengths that lies above the continuum), you can find that there is in general a *very* strong correlation between the 6.2/11.2 flux ratio and the 7.7/11.2 flux ratio (i.e., a plot of 6.2/11.2 vs 7.7/11.2).
+In terms of data treneds, the strengths of the emission features are known to vary as well as correlate; for instance, if you measure the flux of the ``6.2``, ``7.7`` and ``11.2`` bands (i.e., integrate the emission near those wavelengths that lies above the continuum), you can find that there is in general a *very* strong correlation between the ``6.2/11.2`` flux ratio and the ``7.7/11.2`` flux ratio (i.e., a plot of ``6.2/11.2`` vs. ``7.7/11.2``).
 
 ## The problem with splines
 
@@ -41,7 +41,7 @@ These data originate from a "spectral cube", i.e. the spectra are from observati
 There are four cubes, one for each of the following objects:
 NGC 7023, NGC 2023 South, NGC 2023 North, and M17
 
-The cubes have been split into text files for simplicity, one for each position in the cube (e.g., NGC7023_fazio_x0_y0.txt, NGC7023_fazio_x0_y2.txt, NGC7023_fazio_x2_y0.txt). 
+The cubes have been split into text files for simplicity, one for each position in the cube (e.g., ``NGC7023_fazio_x0_y0.txt``, ``NGC7023_fazio_x0_y2.txt``, ``NGC7023_fazio_x2_y0.txt``). 
 
 Within each text file, there are five columns:
 
@@ -63,4 +63,4 @@ We only need ``wave``, ``flux``, ``fluxerr`` and ``spline_flux`` to draw the spe
 
 # Checking out the data
 
-For the cubes, see ``spline/spline.py`` which currently loads in the variables (wave, flux, fluxerr, spline) as 1D numpy arrays.
+For the cubes, see ``spline/spline.py`` which currently loads in the variables (``wave``, ``flux``, ``fluxerr``, ``spline``) as 1D numpy arrays.
