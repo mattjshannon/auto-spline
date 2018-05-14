@@ -60,3 +60,7 @@ These data have the following format, with six columns:
 ``wave, flux, fluxerr, csub, csuberr, spline_flux``
 
 We only need ``wave``, ``flux``, ``fluxerr`` and ``spline_flux`` to draw the spectrum as shown in the first figure.
+
+# Checking out the data
+
+For the cubes, see ``spline/spline.py`` which currently loads in the variables (wave, flux, fluxerr, spline) as 1D numpy arrays.
