@@ -1,5 +1,10 @@
 # auto-spline
 
+Automatic generation of a spline continuum for astronomical spectra.
+
+* Free software: 3-clause BSD license
+* Documentation: (COMING SOON!)
+
 The premise is to improve upon the method in which we draw spline continua in astronomical spectra. For instance, here is the infrared spectrum of an observation from near the Galactic Center:
 
 ![Example spline continuum](/docs/images/fig3.png)
